@@ -3,7 +3,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 import pandas as pd
 from Web_Scrape import web_scrape
 
-def sentiment_csv(x,y):
+def sentiment(x,y):
     a = web_scrape(y)
     half = len(a)//2
     name = a[0:half]
@@ -37,4 +37,4 @@ def sentiment_csv(x,y):
     return df.to_csv(x)
 
 if __name__ == "__main__":
-    sentiment_csv('TEST.csv',51)
+    sentiment('TEST.csv',51)
